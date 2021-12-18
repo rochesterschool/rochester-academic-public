@@ -7,23 +7,26 @@ export default async function handler(req, res) {
   
   const dataweb = await scrapeIt("https://docs.google.com/document/u/1/d/e/2PACX-1vRFz2ykywO28rVLszG3iR2eGEywCTobJRYkrtmEumR329j_dtgp1OmLX0nWRHPsHmUC3Mosu_K8a0PP/pub", {
       articles: {
-        listItem: "p, h1, h2, h3, h4, h5, h6, ul, table", 
+        listItem: "p, h1, h2, h3, h4, h5, h6", 
         data: {
+          // Get the article date and convert it into a Date object
+          // createdAt: {
+          //   selector: ".date"
+          //   , convert: x => new Date(x)
+          // }
+
           // Get the title
           title: "span", 
 
-          table:{
-            listItem: 'table > tbody > tr ',
-          },
-
-          list:{
-            listItem: "ul > li > span",
-            attr: "class",
+          // Nested list
+          tags: {
+            listItem: ".tags > span"
           },
 
           // Get the content
           content: {
-            selector: "span"
+            selector: "span",
+            //how: "html"
           },
 
           image: {
@@ -39,7 +42,7 @@ export default async function handler(req, res) {
       }
     }).then(({ data, response }) => {
       console.log(`Status Code: ${response.statusCode}`)
-      console.log(data.articles.length)
+      console.log(data)
       return data
     })
 
