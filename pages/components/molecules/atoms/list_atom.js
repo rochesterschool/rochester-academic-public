@@ -4,9 +4,7 @@ const list_atom = (list_data) => {
         <>
             <ul>
                 {child.list.map((item, index) => {
-                    return <div>
-                        <li>{JSON.stringify(item)}</li>
-                    </div>
+                    return <li>{JSON.stringify(item).replace('\"', '').replace('.\"', '.')}</li>
                 })}
             </ul>
         </>
