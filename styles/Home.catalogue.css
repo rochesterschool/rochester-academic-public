@@ -19,7 +19,7 @@ p, table, td, li {
     text-align: center;
 }
 
-.subtitle{
+.subtitle {
     padding-top: 3pt;
     color: #0376ba;
     font-weight: 700;
@@ -86,6 +86,28 @@ p, table, td, li {
     text-align: justify;
 }
 
+.title4{
+    padding-top: 15pt;
+    color: #5e5f5f;
+    font-weight: 700;
+    font-size: 11pt;
+    padding-bottom: 10pt;
+    font-family: "Century Gothic";
+    line-height: 1.0;
+    page-break-after: avoid;
+    font-style: italic;
+    orphans: 2;
+    widows: 2;
+    text-align: justify;
+    padding-top: 15pt;
+    padding-bottom: 10pt;
+    line-height: 1.0;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: justify;
+}
+
 .general_text {
     padding-top: 3pt;
     padding-bottom: 6pt;
@@ -115,7 +137,9 @@ table {
     width: 100%;
 }
 
-tr { height: 21.8pt; }
+tr {
+    height: 21.8pt;
+}
 
 td {
     border-right-style: solid;
@@ -148,4 +172,26 @@ h2 {
     orphans: 2;
     widows: 2;
     text-align: left;
+}
+
+ul {
+    margin: 0px 0px;
+}
+
+li {
+    padding-left: 0pt;
+    padding-top: 3pt;
+    padding-bottom: 6pt;
+    line-height: 1.0;
+    orphans: 2;
+    widows: 2;
+    text-align: justify;
+}
+
+img{
+    width: 100%;
+}
+
+.bold {
+    font-weight: 600;
 }
