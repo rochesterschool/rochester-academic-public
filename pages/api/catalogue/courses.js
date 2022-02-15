@@ -52,12 +52,12 @@ export default async function handler(req, res) {
   console.log(`Total web data elements: ${dataweb.articles.length}`)      //1200
 
   const onlyTable = dataweb.articles.filter(item => item.table.length > 0) // Filter out non-table items
-    .map(item => item.table)               // Map to array of arrays
-    .flat()                                // Flatten array of arrays // 23
+                                    .map(item => item.table)               // Map to array of arrays
+                                    .flat()                                // Flatten array of arrays // 23
 
-  const onlyList = dataweb.articles.filter(item => item.list.length > 0)   // Filter out non-list items
-    .map(item => item.list)                 // Map to array of arrays
-    .flat()                                 // Flatten array of arrays // 52
+  const onlyList = dataweb.articles.filter(item => item.list.length > 1)   // Filter out non-list items
+                                   .map(item => item.list)                 // Map to array of arrays
+                                   .flat()                                 // Flatten array of arrays // 52
 
   console.log(`Total table elements: ${onlyTable.length}`)
   console.log(`Total list elements: ${onlyList.length}`)
@@ -94,6 +94,8 @@ export default async function handler(req, res) {
     else if (keywords.title1.includes(instr)) { return "title1" }
     else if (keywords.title2.includes(instr)) { return "title2" }
     else if (keywords.title3.includes(instr)) { return "title3" }
+    else if (keywords.title4.includes(instr)) { return "title4" }
+    else if (keywords.style.includes(instr)) { return "bold" }
 
     else if (inimg.search("googleusercontent") != -1) { return "image" } // the images uploaded are stored in google, url contains googleusercontent 
     else if (inlist.length > 0) { return "list" }
@@ -116,5 +118,6 @@ export default async function handler(req, res) {
 
   console.log(dataWebAssignSection().length)
 
+  //res.status(200).json(dataweb.articles)
   res.status(200).json(dataWebAssignSection())
 }

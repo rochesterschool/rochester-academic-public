@@ -27,10 +27,12 @@
         "Languages",
         "Natural Sciences and Environmental Education",
         "Arts Education",
-        "Physical Education, Recreation and Sports",
+        "Physical Education",
         "Technology and Computer Science",
         "Religious Education",
-        "Ethical Education and Human Values: Family/Mentoring Meetings, Virtues Development Sessions, and the Graduation Project"
+        "Computer Science",
+        "Ethical Education and Human Values: Family/Mentoring Meetings, Virtues Development Sessions, and the Graduation Project",
+        "Virtues Development"
     ],
     "title3": [
         "Institutional Purpose", "Purpose", 
@@ -62,6 +64,14 @@
         "Eleventh Grade",
         "Twelfth Grade"
     ],
+    "title4":[
+        "Real World Spanish", "Real World English", "Applied Mathematics", "Natural and Environmental Science", 
+        "Library", "Physical Education", "Integrated Visual Learning", "Swimming", "Computer Science", "Integrated Visual Learning",
+        "Colombian Social Science", "Religious Education", "Arts Education", "Virtues Development"
+    ],
+    "title5":[
+
+    ],
     "image": [
         "https",
         "https://lh5.googleusercontent.com"
@@ -73,5 +83,6 @@
         "UPPER ELEMENTARY",
         "MIDDLE SCHOOL",
         "HIGH SCHOOL"
-    ]
+    ],
+    "style": [ "Texts:" ]
 }
