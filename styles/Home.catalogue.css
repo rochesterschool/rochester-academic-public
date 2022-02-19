@@ -86,7 +86,7 @@ p, table, td, li {
     text-align: justify;
 }
 
-.title4{
+.title4 {
     padding-top: 15pt;
     color: #5e5f5f;
     font-weight: 700;
@@ -160,18 +160,21 @@ td {
 }
 
 h2 {
-    padding-top: 3pt;
-    color: #0376ba;
-    font-weight: 700;
-    font-size: 12pt;
+    padding-top: 10pt;
     padding-bottom: 10pt;
+    color: #384f94;
+    font-weight: 700;
+    font-size: 2.4rem;
     font-family: "Century Gothic";
     line-height: 1.0;
     page-break-after: avoid;
-    font-style: italic;
     orphans: 2;
     widows: 2;
     text-align: left;
+}
+
+h4 {
+    font-family: "Century Gothic";
 }
 
 ul {
@@ -180,18 +183,119 @@ ul {
 
 li {
     padding-left: 0pt;
+    margin-left: 36pt;
     padding-top: 3pt;
     padding-bottom: 6pt;
     line-height: 1.0;
     orphans: 2;
     widows: 2;
     text-align: justify;
+    list-style-type: initial;
 }
 
-img{
+
+.image-container {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+
+.image-container .image {
     width: 100%;
+    height: 100%;
+    position: relative !important;
+    object-fit: cover;
 }
 
 .bold {
     font-weight: 600;
+}
+
+/**
+** HEAD COMPONENT
+**/
+.head__container {
+    height: 100px;
+    padding: 5px 10px 5px 20px;
+    height: 100px;
+    min-width: 320px;
+    padding: 0;
+    margin: 0;
+    /* background-color: #003865; */
+    background-color: #0000000f;
+    z-index: 999;
+    padding: 0 4rem;
+}
+
+.head__logo {
+    margin: 0.8rem 1.5rem 1.5rem 1.8rem;
+    width: 250px;
+    height: auto;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    margin: 1rem 0rem;
+}
+
+/*
+** CONTENT COMPONENT
+*/
+
+main {
+    display: grid;
+    height: 70vh;
+    grid-gap: 10px;
+    
+    /*Specifying areas*/
+    grid-template-areas:
+    'header header header header'
+    'menu content content content';
+    /*'footer footer footer footer';*/
+    padding: 1.5rem 4rem;
+}
+
+main>* {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Name of areas */
+header {
+    grid-area: header;
+    height: 90px;
+}
+
+aside {
+    grid-area: menu;
+    width: 240px;
+    height: inherit;
+    /* padding: 1rem 0.8rem; */
+}
+
+aside>div {
+    width: inherit;
+}
+
+div#menu__section_filter>* {
+    margin: 2px 0px;
+    font-family: 'Century Gothic';
+}
+
+div#menu__section_filter>label>span {
+    font-size: inherit;
+}
+
+h4#menu__filter_title {
+    background-color: #374f93;
+    color: #fff;
+    padding: 0.5rem 0.7em;
+    border-left: 7px solid #b62326;
+}
+
+section {
+    grid-area: content;
+    padding: 0 1.5rem;
 }
