@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head'
-import Image from 'next/image'
-//import from '../styles/Home.catalogue.css'
-
-//import styles from './assets/styles/main.css';
 
 //Components
-import MoleculeOne from "./components/molecules/molecule_one"
+import Header from './components/organism/head_organism';
+import Content from './components/organism/content_organism';
+// import Footer from './components/organisms/footer_organism';
+import MoleculeOne from "./components/organism/molecules/molecule_one"
 
 
 const main = () => {
@@ -22,7 +20,8 @@ const main = () => {
 
     return (
         <div>
-            <MoleculeOne parent_data={catalogue} />
+            <Header />
+            <Content props={catalogue} />
         </div>
     );
 };
