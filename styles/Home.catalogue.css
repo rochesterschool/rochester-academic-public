@@ -246,11 +246,11 @@ main {
     display: grid;
     height: 70vh;
     grid-gap: 10px;
-    
+
     /*Specifying areas*/
     grid-template-areas:
-    'header header header header'
-    'menu content content content';
+        'header header header header'
+        'menu content content content';
     /*'footer footer footer footer';*/
     padding: 1.5rem 4rem;
 }
@@ -293,6 +293,10 @@ h4#menu__filter_title {
     color: #fff;
     padding: 0.5rem 0.7em;
     border-left: 7px solid #b62326;
+}
+
+label {
+    margin-left: 8px;
 }
 
 section {
