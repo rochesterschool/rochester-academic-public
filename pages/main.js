@@ -7,7 +7,7 @@ import Content from './components/organism/content_organism';
 import MoleculeOne from "./components/organism/molecules/molecule_one"
 
 
-const main = () => {
+const Main = () => {
     const [catalogue, setCatalogue] = useState([]);
 
     useEffect(async () => {
@@ -27,4 +27,4 @@ const main = () => {
 };
 
 
-export default main;
+export default Main;
