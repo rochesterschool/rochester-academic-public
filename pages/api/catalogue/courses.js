@@ -80,8 +80,8 @@ export default async function handler(req, res) {
   })
 
   function itemType(content, image, list, table) {
-    if (content.length > 50) { return 'long_text' }
-    else if (content.length > 0 && content.length <= 50) { return 'short_text' }
+    if (content.length > 100) { return 'long_text' }
+    else if (content.length > 0 && content.length <= 100) { return 'short_text' }
     else if (image.search("googleusercontent") != -1) { return 'image' }
     else if (list.length > 0) { return 'list' }
     else if (table.length > 0) { return 'table' }
@@ -97,7 +97,7 @@ export default async function handler(req, res) {
     else if (keywords.title4.includes(instr)) { return "title4" }
     else if (keywords.style.includes(instr)) { return "bold" }
 
-    else if (inimg.search("googleusercontent") != -1) { return "image" } // the images uploaded are stored in google, url contains googleusercontent 
+    else if (inimg.search("googleusercontent") != -1 || inimg.search("drawings") != -1) { return "image" } // the images uploaded are stored in google, url contains googleusercontent 
     else if (inlist.length > 0) { return "list" }
     else if (intable.length > 0) { return "table" }
     else { return "general_text" }

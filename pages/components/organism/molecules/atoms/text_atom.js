@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-const text_atom = (child_data) => {
+const Text_atom = (child_data) => {
     const child = child_data.child_data
     return (
         <>
@@ -9,4 +7,4 @@ const text_atom = (child_data) => {
     );
 };
 
-export default text_atom;
+export default Text_atom;

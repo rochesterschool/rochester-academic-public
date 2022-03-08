@@ -1,6 +1,6 @@
 import React from 'react';
 
-function molecule_two(props) {
+function Molecule_two(props) {
     return (
         {/* <div className='content__menu'>
             <h3>Filter</h3>
@@ -28,4 +28,4 @@ function molecule_two(props) {
     );
 }
 
-export default molecule_two;
+export default Molecule_two;

@@ -5,7 +5,7 @@ import TableAtom from './atoms/table_atom';
 import ListAtom from './atoms/list_atom';
 import ImageAtom from './atoms/image_atom';
 
-const molecule_one = (parent_data) => {
+const Molecule_one = (parent_data) => {
 
     function getRandomNumber() {
         var min = 10000;
@@ -29,5 +29,5 @@ const molecule_one = (parent_data) => {
     );
 };
 
-export default molecule_one;
+export default Molecule_one;
 

@@ -1,6 +1,6 @@
 //import util from '';
 
-const list_atom = (list_data) => {
+const List_atom = (list_data) => {
     const child = list_data.list_data
     //console.log(util.getRandomNumber())
 
@@ -21,4 +21,4 @@ const list_atom = (list_data) => {
     );
 };
 
-export default list_atom;
+export default List_atom;

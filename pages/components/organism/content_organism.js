@@ -6,9 +6,10 @@ import { Home, Heart } from 'react-iconly'
 import MoleculeOne from "./molecules/molecule_one"
 import MoleculeTwo from "./molecules/molecule_two"
 
-function content_organism(props) {
+function Content_organism(props) {
     const [catalogue, setCatalogue] = useState([])
     const [section, setSection] = useState(0)
+    const [view, setView] = useState("all")
 
     useEffect(() => {
         setCatalogue(props.props)
@@ -24,6 +25,28 @@ function content_organism(props) {
         setCatalogue(newCatalogue)
     }
 
+    const changeViewStudent = () => {
+        console.log("Button student")
+        const elementsToFilter = ['title', 'title1',  /*'title2', 'title3', /*'title4', 'list', */'image'/*, 'table'*/]
+        let copyCatalogue = props.props
+        let studentView = copyCatalogue.filter(item => elementsToFilter.includes(item.subtype) /* || item.type == "short_text" */)
+        console.log(studentView.length)
+        setCatalogue(studentView)
+        setView("student")
+    }
+
+    const changeViewParent = () => {
+        console.log("Button parent")
+
+        setView("parent")
+    }
+
+    const changeViewTeacher = () => {
+        console.log("Button teacher")
+
+        setView("teacher")
+    }
+
     return (
         <main>
             <header>
@@ -35,7 +58,7 @@ function content_organism(props) {
                 <div>
                     <h4 id='menu__filter_title'>Course Catalogue</h4>
                     <section>
-                        <h5>Select a section to see:</h5>
+                        <h5>Choose a section</h5>
                         <div id="menu__section_filter">
                             <div>
                                 <input type="radio" id="filter1" name="filterSection" value="0" onChange={e => changeRadio(e)} />
@@ -77,14 +100,15 @@ function content_organism(props) {
                 <div className="content__head_view">
                     <h5>View options</h5>
                     <div>
-                        <Button size="xs" shadow color="success">Student</Button>
-                    </div>
-                    <div className="content_head_view_buttons">
-                        <Button size="xs" shadow color="warning">Teacher</Button>
+                        <Button id="student_button_view" size="xs" shadow color="success" onClick={ changeViewStudent }>Student</Button>
                     </div>
                     <div>
-                        <Button size="xs" shadow color="error">Parent</Button>
+                        <Button id="parent_button_view" size="xs" shadow color="error" onClick={ changeViewParent }>Parent</Button>
                     </div>
+                    <div>
+                        <Button id="teacher_button_view" size="xs" shadow color="warning" onClick={ changeViewTeacher }>Teacher</Button>
+                    </div>
+                    
                 </div>
                 {/* <MoleculeOne parent_data={props.props} /> */}
                 <MoleculeOne parent_data={catalogue} />
@@ -93,4 +117,4 @@ function content_organism(props) {
     );
 }
 
-export default content_organism;
+export default Content_organism;

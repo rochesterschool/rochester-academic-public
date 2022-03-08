@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-const table_atom = (table_data) => {
+const Table_atom = (table_data) => {
     const child = table_data.table_data
     //console.log(child)
 
@@ -25,4 +23,4 @@ const table_atom = (table_data) => {
     );
 };
 
-export default table_atom;
+export default Table_atom;

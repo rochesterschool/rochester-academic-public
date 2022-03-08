@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 
-function head_organism(props) {
+function Head_organism(props) {
     return (
         <div>
             <Head>
@@ -18,4 +18,4 @@ function head_organism(props) {
     );
 }
 
-export default head_organism;
+export default Head_organism;
