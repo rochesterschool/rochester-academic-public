@@ -1,5 +1,5 @@
 const Table_atom = (table_data) => {
-    const child = table_data.table_data
+    const child = table_data.table_data || []
     //console.log(child)
 
     function getRandomNumber() {
@@ -12,11 +12,20 @@ const Table_atom = (table_data) => {
         <>
             <table>
                 <tbody>
-                    {child.map((item, index) => {
-                        return <tr key={getRandomNumber()}>
-                            <td>{item}</td>
-                        </tr>
-                    })}
+                    {
+                        child && child.map((item, index) => {
+                            return <tr key={getRandomNumber()}>
+                                <td>{item}</td>
+                            </tr>
+                        })
+                        /*child !== undefined ? <p>Loading tables...</p>  
+                                        : child.length > 0 ?
+                                            child.map((item, index) => {
+                                                return <tr key={getRandomNumber()}>
+                                                    <td>{item}</td>
+                                                </tr>
+                                            }) : <p>Loading tables...</p>*/
+                    }
                 </tbody>
             </table>
         </>

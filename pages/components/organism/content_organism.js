@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button, Radio } from '@nextui-org/react';
-import { Home, Heart } from 'react-iconly'
+//import { Home, Heart } from 'react-iconly'
 
 
 import MoleculeOne from "./molecules/molecule_one"
-import MoleculeTwo from "./molecules/molecule_two"
 
 function Content_organism(props) {
     const [catalogue, setCatalogue] = useState([])

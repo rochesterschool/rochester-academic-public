@@ -6,6 +6,7 @@ import ListAtom from './atoms/list_atom';
 import ImageAtom from './atoms/image_atom';
 
 const Molecule_one = (parent_data) => {
+    //console.log(parent_data)
 
     function getRandomNumber() {
         var min = 10000;
@@ -13,7 +14,7 @@ const Molecule_one = (parent_data) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    const htmlRenderData = parent_data.parent_data.map((item, index) => {
+    const htmlRenderData = parent_data.parent_data && parent_data.parent_data.map((item, index) => {
         return <>
             { !item.is_table && !item.is_list && !item.is_image && <TextAtom key={index + getRandomNumber()} child_data={item} /> }
             { item.is_table && <TableAtom key={index + getRandomNumber()} table_data={item.table} /> }

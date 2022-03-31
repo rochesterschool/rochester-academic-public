@@ -1,7 +1,7 @@
 //import util from '';
 
 const List_atom = (list_data) => {
-    const child = list_data.list_data
+    const child = list_data.list_data || []
     //console.log(util.getRandomNumber())
 
     function getRandomNumber() {
@@ -13,9 +13,17 @@ const List_atom = (list_data) => {
     return (
         <>
             <ul >
-                {child.list.map((item, index) => {
-                    return <li key={getRandomNumber() + index}>{JSON.stringify(item).replace('\"', '').replace('.\"', '.')}</li>
-                })}
+                {
+                    child.list && child.list.map((item, index) => {
+                        return <li key={getRandomNumber() + index}>{JSON.stringify(item).replace('\"', '').replace('.\"', '.')}</li>
+                    })
+                    
+                    /*child !== undefined ? <p>Loading list...</p>
+                                        : child.length > 0 ? 
+                                            child.list.map((item, index) => {
+                                                return <li key={getRandomNumber() + index}>{JSON.stringify(item).replace('\"', '').replace('.\"', '.')}</li>
+                                            }) : <p>Loading list...</p>*/
+                }
             </ul>
         </>
     );

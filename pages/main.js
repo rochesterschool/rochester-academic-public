@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react';
 //Components
 import Header from './components/organism/head_organism';
 import Content from './components/organism/content_organism';
-// import Footer from './components/organisms/footer_organism';
-import MoleculeOne from "./components/organism/molecules/molecule_one"
-
 
 const Main = () => {
     const [catalogue, setCatalogue] = useState([]);
@@ -13,15 +10,18 @@ const Main = () => {
     useEffect(async () => {
         const response = await fetch('/api/catalogue/courses');
         const data = await response.json();
-
-        console.log(`Total elements: ${data.length}`);
+        console.log(`Total elements: ${data.length} to render`);
         setCatalogue(data);
     }, []);
 
     return (
         <div>
             <Header />
-            <Content props={catalogue} />
+            {
+                catalogue.length > 0 ? <Content props={catalogue} />
+                                     : <h2> You have {catalogue.length} unread messages.</h2>
+            }
+            {/* <Content props={catalogue} /> */}
         </div>
     );
 };
