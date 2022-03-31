@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 //Components
 import Header from './components/organism/head_organism';
 import Content from './components/organism/content_organism';
+import Loader from './components/organism/loader_organism';
 
 const Main = () => {
     const [catalogue, setCatalogue] = useState([]);
@@ -18,8 +19,8 @@ const Main = () => {
         <div>
             <Header />
             {
-                catalogue.length > 0 ? <Content props={catalogue} />
-                                     : <h2> You have {catalogue.length} unread messages.</h2>
+                catalogue.length ? <Content props={catalogue} />
+                                 : <Loader />
             }
             {/* <Content props={catalogue} /> */}
         </div>
