@@ -1,6 +1,6 @@
 # Aspectos importantes de este proyecto
 ## Objetivo
-El objetivo de esta aplicación es exponer la información de Catalogo de Asignaturas en la web, basado en el documento de Course Catalogue_2021-22. Esta aplicación esta construida usando tecnología Nextjs Framework (V.17.0.2).
+El objetivo de esta aplicación es exponer la información de Catalogo de Asignaturas en la web, basado en el documento de **[Course Catalogue_2021-22](https://docs.google.com/document/d/1PenRBM-khI1Jnk3OxL0bpJAawAFY2TPqbHExOYDMBIE/edit#heading=h.4vpp2swag09f)**. Esta aplicación esta construida usando tecnología Nextjs Framework (V.17.0.2).
 
 ## Estructura
 La arquitectura de esta aplicación esta basada en Componentes. Pueden ver la estructura visitando el siguiente enlace:
